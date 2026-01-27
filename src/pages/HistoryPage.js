@@ -1,9 +1,9 @@
 import { loadConversations } from "../utils/storage";
 import "../styles/history.css";
-import Sidebar from "../components/layout/Sidebar";
-import MessageBubble from "../components/chat/MessageBubble";
-import AIMessageBubble from "../components/chat/AIMessageBubble";
-import ChatInput from "../components/chat/ChatInput";
+// import Sidebar from "../components/layout/Sidebar";
+// import MessageBubble from "../components/chat/MessageBubble";
+// import AIMessageBubble from "../components/chat/AIMessageBubble";
+// import ChatInput from "../components/chat/ChatInput";
 import userIcon from "../assets/icons/User.svg";
 import chatGptLogo from "../assets/icons/ChatGPT_Logo.svg";
 import starFilled from "../assets/icons/Star-filled.svg";

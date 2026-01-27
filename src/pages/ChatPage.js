@@ -5,7 +5,7 @@ import Sidebar from "../components/layout/Sidebar.js";
 import MessageBubble from "../components/chat/MessageBubble.js";
 import AIMessageBubble from "../components/chat/AIMessageBubble.js";
 import ChatInput from "../components/chat/ChatInput.js";
-import Rating from "../components/chat/Rating.js";
+// import Rating from "../components/chat/Rating.js";
 import MobileHeader from "../components/layout/MobileHeader.js";
 import SuggestionCards from "../components/chat/SuggestionCards.js";
 import chatGptLogo from "../assets/icons/ChatGPT_Logo.svg";
