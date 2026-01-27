@@ -1,0 +1,18 @@
+:root {
+  --bg-main: #f5f2fb;
+  --bg-card: #ffffff;
+  --bg-ai: #eee8fb;
+
+  --primary-purple: #7c3aed;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+
+  --shadow-soft: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+}

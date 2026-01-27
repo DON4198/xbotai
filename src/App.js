@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ChatPage from "./pages/ChatPage.js";
+import HistoryPage from "./pages/HistoryPage.js";
+import FeedbackPage from "./pages/FeedbackPage.js";
+import ViewConversationPage from "./pages/ViewConversationPage";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ChatPage />} />
+        <Route path="/history" element={<HistoryPage />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
+        <Route path="/history/:id" element={<ViewConversationPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

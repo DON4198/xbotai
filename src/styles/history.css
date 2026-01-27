@@ -1,0 +1,101 @@
+.history-page {
+  flex: 1;
+  background: #f5f2fb;
+  padding-bottom: 40px;
+}
+
+.history-content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.history-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 32px 0;
+}
+
+.history-section {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* Card */
+.history-card {
+  background: linear-gradient(180deg, #dcd0fa 0%, #c9b8f2 100%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+/* Message row */
+.history-message {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.history-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text styles */
+.history-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.history-text {
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.history-time {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* Rating */
+.history-rating {
+  display: flex;
+  gap: 4px;
+  margin: 6px 0;
+}
+
+.history-rating img {
+  width: 14px;
+}
+
+/* Feedback */
+.history-feedback {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.history-feedback span {
+  font-weight: 600;
+}
+
+/* Thumbs */
+.history-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.history-actions img {
+  width: 14px;
+  opacity: 0.6;
+}
