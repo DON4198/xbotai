@@ -90,10 +90,11 @@ export default function ChatPage() {
 
 
       <div className="chat-container">
-
-        <div className="bot-ai-header">
-  <img src={botAiIcon} alt="Bot AI" className="bot-ai-header-icon" />
-</div>
+        <header>
+          <div className="bot-ai-header">
+            <img src={botAiIcon} alt="Bot AI" className="bot-ai-header-icon" />
+          </div>
+        </header>
 
       {messages.length === 0 && (
             <>

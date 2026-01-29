@@ -14,7 +14,7 @@ export default function Sidebar() {
             className="sidebar-chatgpt-logo"
         />
 
-        <span className="sidebar-newchat-text">New Chat</span>
+        <a href="/"><span className="sidebar-newchat-text">New Chat</span></a> 
 
         <img
             src={editIcon}

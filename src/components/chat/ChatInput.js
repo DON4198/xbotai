@@ -5,7 +5,7 @@ export default function ChatInput({ onSubmit, onSave, inputValue, setInputValue 
   <input
     type="text"
     className="chat-text-input"
-    placeholder="Message Bot AI…"
+    placeholder="Message Bot AI..."
     value={inputValue}
     onChange={(e) => setInputValue(e.target.value)}
   />

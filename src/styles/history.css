@@ -5,9 +5,9 @@
 }
 
 .history-content-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
+  width: 100%;
+  padding: 0 5px;          /* same left/right padding as input */
+  box-sizing: border-box;
 }
 
 .history-title {
@@ -29,7 +29,9 @@
   background: linear-gradient(180deg, #dcd0fa 0%, #c9b8f2 100%);
   border-radius: 12px;
   padding: 16px 20px;
-  margin-bottom: 20px;
+  width: 100%;             /* KEY FIX */
+  margin: 12px 0;          /* vertical spacing only */
+  box-sizing: border-box;
 }
 
 /* Message row */
@@ -37,6 +39,9 @@
   display: flex;
   gap: 12px;
   margin-bottom: 14px;
+  width: 100%;
+  align-items: flex-start;
+
 }
 
 .history-avatar {
