@@ -30,15 +30,10 @@ export default function ChatPage() {
     const input = inputValue.trim();
     if (!input) return;
 
-    const normalizedInput = input.toLowerCase().trim();
+      const aiResponse = stubResponses[input]
+    ? stubResponses[input]
+    : "Sorry, Did not understand your query!";
 
-    const matchedKey = Object.keys(stubResponses).find(
-      (key) => key.toLowerCase().trim() === normalizedInput
-    );
-
-    const aiResponse = matchedKey
-      ? stubResponses[matchedKey]
-      : "Sorry, Did not understand your query!";
 
 
     const timestamp = new Date().toLocaleTimeString([], {
@@ -98,10 +93,12 @@ export default function ChatPage() {
 
       <div className="chat-container">
         <header>
-          <div className="bot-ai-header">
-            <img src={botAiIcon} alt="Bot AI" className="bot-ai-header-icon" />
-          </div>
-        </header>
+            <div className="bot-ai-header">
+              <img src={botAiIcon} alt="Bot AI" className="bot-ai-header-icon" />
+              <span>Bot AI</span>
+            </div>
+          </header>
+
 
       {messages.length === 0 && (
             <>
