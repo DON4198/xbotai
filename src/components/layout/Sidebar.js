@@ -28,14 +28,14 @@ export default function Sidebar() {
       </div>
 
       {/* Past Conversations */}
-      <Link
-        to="/history"
-        className={`sidebar-pill ${
-          location.pathname.startsWith("/history") ? "active" : ""
-        }`}
-      >
-        Past Conversations
-      </Link>
+    <Link
+            to="/history"
+            data-testid="past-conversations-link"
+            className={`sidebar-pill ${location.pathname.startsWith("/history") ? "active" : ""}`}
+            >
+            Past Conversations
+            </Link>
+
 
       {/* Feedback */}
       <Link

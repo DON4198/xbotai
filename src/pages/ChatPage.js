@@ -30,9 +30,16 @@ export default function ChatPage() {
     const input = inputValue.trim();
     if (!input) return;
 
-    const aiResponse =
-      stubResponses[input] ||
-      "Sorry, Did not understand your query!";
+    const normalizedInput = input.toLowerCase().trim();
+
+    const matchedKey = Object.keys(stubResponses).find(
+      (key) => key.toLowerCase().trim() === normalizedInput
+    );
+
+    const aiResponse = matchedKey
+      ? stubResponses[matchedKey]
+      : "Sorry, Did not understand your query!";
+
 
     const timestamp = new Date().toLocaleTimeString([], {
     hour: "2-digit",
