@@ -30,9 +30,16 @@ export default function ChatPage() {
     const input = inputValue.trim();
     if (!input) return;
 
-      const aiResponse = stubResponses[input]
-    ? stubResponses[input]
-    : "Sorry, Did not understand your query!";
+      const normalizedInput = input.trim().replace(/\?$/, "");
+
+          const matchedKey = Object.keys(stubResponses).find(
+            (key) => key.replace(/\?$/, "") === normalizedInput
+          );
+
+          const aiResponse = matchedKey
+            ? stubResponses[matchedKey]
+            : "Sorry, Did not understand your query!";
+
 
 
 
@@ -94,10 +101,10 @@ export default function ChatPage() {
       <div className="chat-container">
         <header>
             <div className="bot-ai-header">
-              <img src={botAiIcon} alt="Bot AI" className="bot-ai-header-icon" />
               <span>Bot AI</span>
             </div>
           </header>
+
 
 
       {messages.length === 0 && (
