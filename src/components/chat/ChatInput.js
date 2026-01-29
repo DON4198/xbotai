@@ -1,7 +1,7 @@
 export default function ChatInput({ onSubmit, onSave, inputValue, setInputValue }) {
 
   return (
- <form className="chat-input-bar" onSubmit={onSubmit}>
+  <form className="chat-input-bar" onSubmit={onSubmit}>
   <input
     type="text"
     className="chat-text-input"
