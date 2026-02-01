@@ -19,7 +19,6 @@ export default function ChatPage() {
   const [inputValue, setInputValue] = useState("");
 
 
-
   // Load active draft chat only (not saved history)
   useEffect(() => {
     setMessages([]);
@@ -99,11 +98,15 @@ export default function ChatPage() {
 
 
       <div className="chat-container">
-        <header>
+        {/* <header>
             <div className="bot-ai-header">
               <span>Bot AI</span>
             </div>
+          </header> */}
+          <header>
+                Bot AI
           </header>
+
 
 
 

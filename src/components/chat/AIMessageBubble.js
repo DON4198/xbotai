@@ -20,7 +20,7 @@ export default function AIMessageBubble({ text, onFeedback, time }) {
 
       <div className="message-content">
         <span className="message-author">Soul AI</span>
-        <p className="text">{text}</p>
+        <p data-testid="ai-response">{text}</p>
       </div>
 
      <div className="message-meta">
