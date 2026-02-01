@@ -9,7 +9,7 @@ import ChatInput from "../components/chat/ChatInput.js";
 import MobileHeader from "../components/layout/MobileHeader.js";
 import SuggestionCards from "../components/chat/SuggestionCards.js";
 import chatGptLogo from "../assets/icons/ChatGPT_Logo.svg";
-import botAiIcon from "../assets/icons/Bot AI.svg";
+// import botAiIcon from "../assets/icons/Bot AI.svg";
 import "../styles/chat.css";
 
 export default function ChatPage() {
