@@ -103,9 +103,10 @@ export default function ChatPage() {
               <span>Bot AI</span>
             </div>
           </header> */}
-          <header>
-                Bot AI
+         <header>
+            <h1>Bot AI</h1>
           </header>
+
 
 
 
