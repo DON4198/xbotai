@@ -25,10 +25,10 @@ export default function SuggestionCards({ onSelect }) {
         >
 
           <div className="suggestion-text">
-            <p className="title">{text}</p>
-            <p className="subtitle">
+            <span className="title">{text}</span>
+            <span className="subtitle">
               Get immediate AI generated response
-            </p>
+            </span>
           </div>
         </div>
       ))}
