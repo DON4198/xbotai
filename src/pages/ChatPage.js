@@ -21,47 +21,48 @@ export default function ChatPage() {
     setMessages([]);
   }, []);
 
-  const sendMessage = (e) => {
-    e.preventDefault();
+const sendMessage = (e) => {
+  e.preventDefault();
 
-    const input = inputValue.trim();
-    if (!input) return;
+  const input = inputValue.trim();
+  if (!input) return;
 
-    const normalizedInput = input
+  const normalizedInput = input
+    .toLowerCase()
+    .replace(/\?$/, "")
+    .trim();
+
+  const matchedItem = stubResponses.find((item) =>
+    item.question
       .toLowerCase()
       .replace(/\?$/, "")
-      .trim();
+      .trim() === normalizedInput
+  );
 
-    const matchedItem = stubResponses.find((item) =>
-      item.question
-        .toLowerCase()
-        .replace(/\?$/, "")
-        .trim() === normalizedInput
-    );
+  const aiResponse = matchedItem
+    ? matchedItem.response
+    : "Sorry, Did not understand your query!";
 
-    const aiResponse = matchedItem
-      ? matchedItem.response
-      : "Sorry, I did not understand your query!";
+  const timestamp = new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit"
+  });
 
-    const timestamp = new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit"
-    });
+  setMessages((prev) => [
+    ...prev,
+    { id: Date.now(), sender: "user", text: input, time: timestamp },
+    {
+      id: Date.now() + 1,
+      sender: "ai",
+      text: aiResponse,
+      feedback: null,
+      time: timestamp
+    }
+  ]);
 
-    setMessages((prev) => [
-      ...prev,
-      { id: Date.now(), sender: "user", text: input, time: timestamp },
-      {
-        id: Date.now() + 1,
-        sender: "ai",
-        text: aiResponse,
-        feedback: null,
-        time: timestamp
-      }
-    ]);
+  setInputValue("");
+};
 
-    setInputValue("");
-  };
 
   const saveConversation = () => {
     if (messages.length === 0) return;
